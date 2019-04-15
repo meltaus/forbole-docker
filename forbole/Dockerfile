@@ -13,6 +13,9 @@ RUN curl https://install.meteor.com/ | sh
 #forbole
 RUN cd /opt && mkdir gaia-bin && mkdir settings && git clone https://github.com/forbole/big_dipper.git
 
+#checkout irishub
+RUN cd /opt/big_dipper && git checkout irishub
+
 #initialize meteor
 RUN cd /opt/big_dipper && meteor npm install --allow-superuser && meteor update --allow-superuser
 

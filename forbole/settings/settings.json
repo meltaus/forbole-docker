@@ -1,29 +1,29 @@
 {
     "public":{
-        "chainName": "Cosmos Testnet",
-        "chainId": "cosmoshub-1",
+        "chainName": "Iris Mainnet",
+        "chainId": "irishub",
         "gtm": "GTM-54321A",
         "slashingWindow": 10000,
         "uptimeWindow": 250,
         "initialPageSize": 30,
-        "bech32PrefixAccAddr": "cosmos",
-        "bech32PrefixAccPub": "cosmospub",
-        "bech32PrefixValAddr": "cosmosvaloper",
-        "bech32PrefixValPub": "cosmosvaloperpub",
-        "bech32PrefixConsAddr": "cosmosvalcons",
-        "bech32PrefixConsPub": "cosmosvalconspub"
+        "bech32PrefixAccAddr": "iia",
+        "bech32PrefixAccPub": "iap",
+        "bech32PrefixValAddr": "iva",
+        "bech32PrefixValPub": "ivp",
+        "bech32PrefixConsAddr": "ica",
+        "bech32PrefixConsPub": "icp"
     },
-    "genesisFile": "https://raw.githubusercontent.com/cosmos/launch/master/penultimate_genesis.json",
+    "genesisFile": "https://raw.githubusercontent.com/irisnet/betanet/master/config/genesis.json",
     "remote":{
         "rpc":"http://ip:26657",
-        "lcd":"https://ip:1317"
+        "lcd":"http://ip:1317"
     },
     "debug": {
         "startTimer": true
     },
     "bin":{
-        "gaiacli": "/opt/gaia-bin/gaiacli",
-        "gaiadebug": "/opt/gaia-bin/gaiadebug"
+        "gaiacli": "/opt/gaia-bin/iriscli",
+        "gaiadebug": "/opt/gaia-bin/iristool debug"
     },
     "params":{
         "startHeight": 0,
