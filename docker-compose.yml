@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+    mongoDB:
+        image: mongo:latest
+        volumes:
+            - ./data:/data/db
+        networks:
+            forbole-net:
+                ipv4_address: 172.28.0.2
+        ports:
+            - 3001:27017
+    forbole:
+        image: forbole-cosmos:latest
+        volumes:
+            - ./forbole/bin:/opt/gaia-bin
+            - ./forbole/settings:/opt/settings
+        environment:
+            - MONGO_URL=mongodb://172.28.0.2:27017/meteor
+        networks:
+            forbole-net:
+                ipv4_address: 172.28.0.3
+
+networks:
+  forbole-net:
+    driver: bridge
+    ipam:
+        driver: default
+        config:
+            - subnet: 172.28.0.0/24
