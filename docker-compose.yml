@@ -3,6 +3,7 @@ version: '3'
 services:
     mongoDB:
         image: mongo:latest
+        restart: always
         volumes:
             - ./data:/data/db
         networks:
@@ -12,6 +13,7 @@ services:
             - 3001:27017
     forbole:
         image: forbole-iris:latest
+        restart: always
         volumes:
             - ./forbole/bin:/opt/gaia-bin
             - ./forbole/settings:/opt/settings
