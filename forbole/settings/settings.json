@@ -1,8 +1,8 @@
 {
     "public":{
-        "chainName": "Cosmos Testnet",
-        "chainId": "cosmoshub-1",
-        "gtm": "GTM-54321A",
+        "chainName": "Cosmos",
+        "chainId": "cosmoshub-2",
+        "gtm": "{Add your Google Tag Manager ID here}",
         "slashingWindow": 10000,
         "uptimeWindow": 250,
         "initialPageSize": 30,
@@ -13,16 +13,16 @@
         "bech32PrefixConsAddr": "cosmosvalcons",
         "bech32PrefixConsPub": "cosmosvalconspub"
     },
-    "genesisFile": "https://raw.githubusercontent.com/cosmos/launch/master/penultimate_genesis.json",
+    "genesisFile": "https://raw.githubusercontent.com/cosmos/launch/master/genesis.json",
     "remote":{
         "rpc":"http://ip:26657",
         "lcd":"https://ip:1317"
     },
     "debug": {
-        "startTimer": true
+        "startTimer": true,
+        "readGenesis": true
     },
     "bin":{
-        "gaiacli": "/opt/gaia-bin/gaiacli",
         "gaiadebug": "/opt/gaia-bin/gaiadebug"
     },
     "params":{
@@ -33,6 +33,7 @@
         "statusInterval":7500,
         "signingInfoInterval": 1800000,
         "proposalInterval": 5000,
-        "missedBlocksInterval": 60000
+        "missedBlocksInterval": 60000,
+        "delegationInterval": 900000
     }
 }
